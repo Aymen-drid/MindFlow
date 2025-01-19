@@ -21,13 +21,13 @@ interface SignInCardProps {
 export const SignUpCard = ({setState}:SignInCardProps) => {
     const [email, SetEmail] = useState<string>("");
     const [password, setPassword] = useState<string>("");
-    const [ConfirmPassword, setConfirmPassword] = useState<string>("");
+    const [confirmPassword, setConfirmPassword] = useState<string>("");
 
     return (
         
         <Card className="space-y-5 w-full h-full p-8 ">
             <CardHeader className="px-0 pt-0">
-                <CardTitle>Login to continue</CardTitle>
+                <CardTitle>Sign up to continue</CardTitle>
                 <CardDescription>Use your email or another service to continue</CardDescription>
             </CardHeader>
             <CardContent className="space-y-5 px-0 pb-0">
@@ -49,7 +49,7 @@ export const SignUpCard = ({setState}:SignInCardProps) => {
                         type="password"
                     ></Input>
                      <Input
-                        value={ConfirmPassword}
+                        value={confirmPassword}
                         disabled={false}
                         placeholder="Confirm Password"
                         onChange={(e) => { setConfirmPassword(e.target.value) }}
@@ -62,13 +62,12 @@ export const SignUpCard = ({setState}:SignInCardProps) => {
                 <div className="flex flex-col gap-y-2.5 ">
                     <Button className="w-full relative " disabled={false} onClick={()=>{} } size="lg" variant="outline"> <FcGoogle className="absolute size-5 top-2.5 left-2.5" size="lg"/> Continue with google</Button>
                     <Button className="w-full relative" disabled={false} onClick={()=>{} } size="lg" variant="outline"><FaGithub className="absolute size-5 top-2.5 left-2.5"/> Continue with github</Button>
-                    <Button className="w-full relative" disabled={false} onClick={()=>{} } size="lg" variant="outline"><FaGithub className="absolute size-5 top-2.5 left-2.5"/>Continue with email</Button>
 
 
                 </div>
             </CardContent>
             <CardFooter className="text-muted-foreground text-xs px-0 pb-0">
-                <p>Do you have an account ?  <span className="text-sky-700 hover:underline cursor-pointer" onClick={()=>{setState("signIn")}}>sign-in</span></p>
+                <p>Already  have an account ?  <span className="text-sky-700 hover:underline cursor-pointer" onClick={()=>{setState("signIn")}}>Sign in</span></p>
             </CardFooter>
         </Card>
         
