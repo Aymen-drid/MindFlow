@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Inter, Roboto_Mono } from 'next/font/google'
+import { ConvexAuthNextjsServerProvider } from "@convex-dev/auth/nextjs/server";
 
 const inter = Inter({
   subsets: ['latin'],
@@ -24,8 +25,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
+     <ConvexAuthNextjsServerProvider>
     <html lang="en" className={`${inter.variable} ${roboto_mono.variable}`}>
-      <body>{children}</body>
+      <body>
+      {children}
+      </body>
     </html>
+ </ConvexAuthNextjsServerProvider>
   )
 }
