@@ -3,7 +3,7 @@ import { useAuthActions } from "@convex-dev/auth/react";
 import {TriangleAlert} from "lucide-react"
 import {FcGoogle} from "react-icons/fc"
 import {FaGithub} from "react-icons/fa"
-// import {FaEmail} from "react-icons/fa"
+
 import { Button } from "@/components/ui/button"
 import {
     Card,
